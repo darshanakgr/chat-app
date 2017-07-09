@@ -11,7 +11,9 @@ socket.on('newMessage', function(message){
   console.log("New Message", message );
 });
 
-// socket.emit('createMessage', {
-//   from:'andrew@example.com',
-//   text:"Hey! How are you"
-// });
+socket.emit('createMessage', {
+  from:'Andrew',
+  text:"Hey! How are you?"
+}, function(data) {
+  console.log('From server :', data);
+});
